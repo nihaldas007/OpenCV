@@ -1,8 +1,12 @@
 import cv2 as cv
 
-# img = cv.imread('Images/Logo1.jpg')
+def rescale_frame(frame,scale=0.75):
+    width = int(frame.shape[1] * scale)
+    height = int(frame.shape[0] * scale)
 
-# cv.imshow('Logo1', img)
+    dimenstions = (width, height)
+
+    return cv.resize(frame, dimentions, interpolation=cv.INTER_AREA)
 
 capture = cv.VideoCapture('videos/dog.mp4')
 
