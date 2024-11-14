@@ -1,4 +1,4 @@
-import cv2 as cv
+import cv2 as cv # type: ignore
 
 # img = cv.imread('Images/Logo1.jpg')
 
